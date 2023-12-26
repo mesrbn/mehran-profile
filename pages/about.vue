@@ -1,5 +1,3 @@
 <template>
-    <div>
-        This is about me!
-    </div>
+  <div>This is about me!</div>
 </template>

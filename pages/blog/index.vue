@@ -1,5 +1,3 @@
 <template>
-    <div>
-        All the blog post list!
-    </div>
+  <div>All the blog post list!</div>
 </template>
