@@ -1,0 +1,36 @@
+<template>
+  <nav class="font-mono">
+    <ul class="flex space-x-4">
+      <li>
+        <NuxtLink :to="localPath('/')" class="link">Home</NuxtLink>
+      </li>
+      <li>
+        <NuxtLink :to="localPath('/about')" class="link">About</NuxtLink>
+      </li>
+      <li>
+        <select v-model="language">
+          <option v-for="item in locales" :key="item" :value="item.code">
+            {{ item.name }}
+          </option>
+        </select>
+      </li>
+    </ul>
+  </nav>
+</template>
+
+<style scoped>
+.link {
+  @apply p-1 hover:bg-gray-200;
+}
+</style>
+
+<script setup>
+const { locales, locale, setLocale } = useI18n();
+const localPath = useLocalePath();
+const language = computed({
+  get: () => locale.value,
+  set: (value) => {
+    setLocale(value);
+  },
+});
+</script>
