@@ -5,6 +5,9 @@
         <NuxtLink :to="localPath('/')" class="link">Home</NuxtLink>
       </li>
       <li>
+        <NuxtLink :to="localPath('/projects')" class="link">Projects</NuxtLink>
+      </li>
+      <li>
         <NuxtLink :to="localPath('/about')" class="link">About</NuxtLink>
       </li>
       <li>
