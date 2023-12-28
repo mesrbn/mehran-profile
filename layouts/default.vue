@@ -10,6 +10,9 @@
         >
       </div>
       <Menu />
+      <ClientOnly>
+        <ColorModeSelector />
+      </ClientOnly>
     </header>
     <main class="p-2 mt-10">
       <slot />
@@ -33,8 +36,8 @@ useHead({
   ],
 });
 const { locales, locale, setLocale } = useI18n();
-const colorMode = useColorMode();
-console.log("the color mode is taken from: ", colorMode.preference);
+//const colorMode = useColorMode();
+//console.log("the color mode is taken from: ", colorMode.preference);
 // changing manually
 //colorMode.preference = "light";
 const localPath = useLocalePath();
