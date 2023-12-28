@@ -33,6 +33,10 @@ useHead({
   ],
 });
 const { locales, locale, setLocale } = useI18n();
+const colorMode = useColorMode();
+console.log("the color mode is taken from: ", colorMode.preference);
+// changing manually
+//colorMode.preference = "light";
 const localPath = useLocalePath();
 const language = computed({
   get: () => locale.value,
@@ -45,5 +49,9 @@ const language = computed({
 <style>
 body {
   font-family: "Roboto";
+}
+
+body {
+  @apply bg-white dark:bg-slate-800 text-gray-700 dark:text-gray-300;
 }
 </style>

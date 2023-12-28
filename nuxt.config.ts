@@ -4,7 +4,11 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/tailwindcss',
     '@nuxtjs/i18n',
+    '@nuxtjs/color-mode',
   ],
+  colorMode: {
+    classSuffix: ''
+  },
   i18n: {
     /* module options */
     // vueI18n: './nuxt-i18n.js', // custom path example
