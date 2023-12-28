@@ -9,23 +9,7 @@
           >Mehran Sarabchian</NuxtLink
         >
       </div>
-      <nav class="font-mono">
-        <ul class="flex space-x-4">
-          <li>
-            <NuxtLink :to="localPath('/')">Home</NuxtLink>
-          </li>
-          <li>
-            <NuxtLink :to="localPath('/about')">About</NuxtLink>
-          </li>
-          <li>
-            <select v-model="language">
-              <option v-for="item in locales" :key="item" :value="item.code">
-                {{ item.name }}
-              </option>
-            </select>
-          </li>
-        </ul>
-      </nav>
+      <Menu />
     </header>
     <main class="p-2">
       <slot />
@@ -34,6 +18,20 @@
 </template>
 
 <script setup>
+useHead({
+  titleTemplate: "%s - Mehran Sarabchian",
+  link: [
+    {
+      rel: "preconnect",
+      href: "https://fonts.googleapis.com",
+    },
+    {
+      rel: "stylesheet",
+      href: "https://fonts.googleapis.com/css2?family=Roboto&display=swap",
+      crossorigin: "",
+    },
+  ],
+});
 const { locales, locale, setLocale } = useI18n();
 const localPath = useLocalePath();
 const language = computed({
@@ -43,3 +41,9 @@ const language = computed({
   },
 });
 </script>
+
+<style>
+body {
+  font-family: "Roboto";
+}
+</style>
