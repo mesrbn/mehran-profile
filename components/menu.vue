@@ -1,6 +1,6 @@
 <template>
   <nav class="font-mono">
-    <ul class="flex space-x-4">
+    <ul class="flex flex-col md:flex-row md:space-x-4">
       <li>
         <NuxtLink :to="localPath('/')" class="link">Home</NuxtLink>
       </li>
@@ -29,7 +29,7 @@
 
 <style scoped>
 .link {
-  @apply p-1 hover:bg-gray-200;
+  @apply p-1 hover:bg-gray-200 dark:hover:bg-gray-900 text-xl md:text-base;
 }
 </style>
 

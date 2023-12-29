@@ -3,8 +3,8 @@
     and this root element cannot be a <slot />. -->
 <template>
   <div class="container mx-auto max-w-2xl">
-    <header class="flex justify-between items-center">
-      <div>
+    <header class="flex justify-between items-start md:items-center">
+      <div class="hidden md:block">
         <NuxtLink to="/" class="text-xl font-semibold p-2 hover:bg-gray-200"
           >Mehran Sarabchian</NuxtLink
         >
