@@ -11,6 +11,9 @@
         <NuxtLink :to="localPath('/about')" class="link">About</NuxtLink>
       </li>
       <li>
+        <NuxtLink :to="localPath('/resume')" class="link">Resume</NuxtLink>
+      </li>
+      <li>
         <select v-model="language">
           <option v-for="item in locales" :key="item" :value="item.code">
             {{ item.name }}
