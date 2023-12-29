@@ -1,4 +1,5 @@
 ---
+publishedAt: 2023-12-28 13:00:00
 description: A beginner's guide to getting started with Vue 3.
 image: /images/vue-logo.png
 head:
